@@ -1,0 +1,1 @@
+(()=>{"use strict";document.createElement("h1").textContent="Aroma and Taste",document.body.appendChild(h1)})();
