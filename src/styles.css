@@ -1,0 +1,9 @@
+
+.tabs{
+    display: flex;
+    justify-content: space-around;
+    background-color: blanchedalmond;
+}
+h1{
+    color: antiquewhite;
+}

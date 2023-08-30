@@ -1,5 +1,6 @@
 
-function homePage() {
+//function homePage() {
+    const contentDiv = document.getElementsByClassName('content')
     const restaurantName = document.createElement("h1");
     restaurantName.textContent = "Aroma and Taste"
     document.body.appendChild(restaurantName);
@@ -8,26 +9,29 @@ function homePage() {
     tabsDiv.classList.add("tabs");
     document.body.appendChild(tabsDiv)
 
-     //about link
-    const aboutTab = document.createElement("h3");
-    const aboutLink = document.createElement("a");
-    aboutLink.href = "ABOUT"
-    aboutLink.textContent = "ABOUT"
-    tabsDiv.appendChild(aboutLink)
+     //about button
+     const aboutButton = document.createElement('button');
+     aboutButton.textContent = 'ABOUT';
+     aboutButton.classList.add("tabsButton");
+     tabsDiv.appendChild(aboutButton)
 
-     //menu link
-     const menuTab = document.createElement("h3");
-     const menuLink = document.createElement("a");
-     menuLink.href = "MENU"
-     menuLink.textContent = "MENU"
-     tabsDiv.appendChild(menuLink)
+     //menu button
+     const menuButton = document.createElement('button');
+     menuButton.textContent = 'MENU';
+     menuButton.classList.add("tabsButton");
+     tabsDiv.appendChild(menuButton)
+     
+     //order button
+     const orderButton = document.createElement('button');
+     orderButton.textContent = 'ORDER';
+     orderButton.classList.add("tabsButton");
+     tabsDiv.appendChild(orderButton)
+     
+        const bodyElement = document.body;
+        bodyElement.style.backgroundImage = 'url("./static/images/background.jpg")';
+        bodyElement.style.backgroundSize = 'cover'; 
+        bodyElement.style.backgroundRepeat = 'no-repeat';
 
-     //order link
-     const orderTab = document.createElement("h3");
-     const orderLink = document.createElement("a");
-     orderLink.href = "ORDER"
-     orderLink.textContent = "ORDER"
-     tabsDiv.appendChild(orderLink)
-}; 
+//}; 
 
-export default homePage();
+//export default homePage();
