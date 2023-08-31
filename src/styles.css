@@ -7,3 +7,29 @@
 h1{
     color: antiquewhite;
 }
+.headingDiv1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.DishesDiv{
+   display: flex; 
+   flex-wrap: wrap;
+   justify-content: space-around;
+   align-items: center;
+   padding: 5%;   
+}
+.pastriesDiv{
+    display: flex; 
+   flex-wrap: wrap;
+   justify-content: space-around;
+   align-items: center;
+   padding: 5%;
+}
+.cocktailDiv{
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5%;
+}
