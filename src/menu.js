@@ -19,35 +19,42 @@ menuContainer.appendChild(cocktailDiv)
 document.body.appendChild(menuContainer);
 
 const imageUrls1 = [
-    './static/images/banku.jpeg',
-    './static/images/friedRice.jpeg',
-    './static/images/friesss.jpeg',
-    './static/images/fufuuu.jpeg',
-    './static/images/gcb3.jpeg',
-    './static/images/jollof.jpeg',];
-
-    const heading1 = document.createElement('h2')
-    heading1.textContent = "Local and Continental Dishes"
-    const headingDiv1 = document.createElement('div')
-    headingDiv1.classList.add('headingDiv1')
-    headingDiv1.appendChild(heading1)
-    DishesDiv.appendChild(headingDiv1)
-
-imageUrls1.forEach((imageUrl) => {
-  const imageDiv1 = document.createElement('div');
-  const image = document.createElement('img');
-  image.src = imageUrl;
-  image.alt = 'Image';
-  image.style.width = '150px';
-  image.style.height = '150px'
-
-  const text = document.createElement('p');
-  text.textContent = 'hello';
-
-  imageDiv1.appendChild(image);
-  imageDiv1.appendChild(text);
-  DishesDiv.appendChild(imageDiv1)
-});
+   './static/images/banku.jpeg',
+   './static/images/friedRice.jpeg',
+   './static/images/friesss.jpeg',
+   './static/images/fufuuu.jpeg',
+   './static/images/gcb3.jpeg',
+   './static/images/jollof.jpeg',
+ ];
+ 
+ const dishTexts = [
+   'Delicious Banku',
+   'Tasty Fried Rice',
+   'Crispy Fries',
+   'Traditional Fufu',
+   'Yummy GCB',
+   'Flavorful Jollof Rice',
+ ];
+ 
+  // Assuming you have a div with the id 'dishes-container' in your HTML
+ 
+ imageUrls1.forEach((imageUrl, index) => {
+   const imageDiv = document.createElement('div');
+   const image = document.createElement('img');
+   image.src = imageUrl;
+   image.alt = 'Image';
+   image.style.width = '150px';
+   image.style.height = '150px';
+ 
+   const text = document.createElement('p');
+   text.textContent = dishTexts[index];
+ 
+   imageDiv.appendChild(image);
+   imageDiv.appendChild(text);
+   DishesDiv.appendChild(imageDiv);
+ });
+ 
+ 
 
 const imageUrls2 = [
     './static/images/burger.jpeg',

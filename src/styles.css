@@ -7,11 +7,7 @@
 h1{
     color: antiquewhite;
 }
-.headingDiv1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 .DishesDiv{
    display: flex; 
    flex-wrap: wrap;
