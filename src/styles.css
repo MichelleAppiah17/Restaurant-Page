@@ -52,4 +52,19 @@ h1{
 .orderButtonDiv{
     padding-top: 40px;
 }
+h4{
+    padding: 5%;
+    font-size: 30px;
+    color: rgb(255, 140, 0);
+}
+h5{
+    font-size: 30px;
+    color: black;
+}
+.aboutContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
     
