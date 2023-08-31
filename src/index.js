@@ -42,12 +42,15 @@ import './styles.css'
         bodyElement.style.backgroundRepeat = 'no-repeat';
 
 menuButton.addEventListener('click', () => {
-    clearContent();
+   // clearContent();
     menuPage();
+    aboutPage.style.display = 'none'
+    orderPage.style.display = 'none'
+//menuPage();
   });
   
   aboutButton.addEventListener('click', () => {
-    clearContent();
+   // clearContent();
     aboutPage();
   });
   
