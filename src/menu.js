@@ -1,16 +1,14 @@
 
 function menuPage(){
-   // menuButton.addEventListener('click', function() {
         const menuContainer = document.createElement('div');
-        menuContainer.style.backgroundColor= 'blue';
+        menuContainer.style.backgroundColor= 'rgba(0, 0, 255, 0.5)';
         
-// Create a div for the first two images
-const DishesDiv = document.createElement('div');
-DishesDiv.classList.add('DishesDiv')
-const pastriesDiv = document.createElement('div');
-pastriesDiv.classList.add('pastriesDiv')
-const cocktailDiv = document.createElement('div');
-cocktailDiv.classList.add('cocktailDiv')
+   const DishesDiv = document.createElement('div');
+   DishesDiv.classList.add('DishesDiv')
+   const pastriesDiv = document.createElement('div');
+   pastriesDiv.classList.add('pastriesDiv')
+   const cocktailDiv = document.createElement('div');
+   cocktailDiv.classList.add('cocktailDiv')
 
 menuContainer.appendChild(DishesDiv)
 menuContainer.appendChild(pastriesDiv)
@@ -27,16 +25,14 @@ const imageUrls1 = [
    './static/images/jollof.jpeg',
  ];
  
- const dishTexts = [
-   'Delicious Banku',
-   'Tasty Fried Rice',
-   'Crispy Fries',
-   'Traditional Fufu',
-   'Yummy GCB',
-   'Flavorful Jollof Rice',
+ const dishTexts1 = [
+   'Banku and Tilapia: ',
+   'Fried Rice',
+   'Fries',
+   'Fufu',
+   'G)b3',
+   'Jollof Rice',
  ];
- 
-  // Assuming you have a div with the id 'dishes-container' in your HTML
  
  imageUrls1.forEach((imageUrl, index) => {
    const imageDiv = document.createElement('div');
@@ -47,65 +43,81 @@ const imageUrls1 = [
    image.style.height = '150px';
  
    const text = document.createElement('p');
-   text.textContent = dishTexts[index];
+   text.textContent = dishTexts1[index];
  
    imageDiv.appendChild(image);
    imageDiv.appendChild(text);
    DishesDiv.appendChild(imageDiv);
  });
  
+ const imageUrls2 = [
+   './static/images/burger.jpeg',
+  './static/images/cake.jpeg',
+  './static/images/cupcake.jpeg',
+  './static/images/meatpie.jpeg',
+  './static/images/pancake.jpeg',
+  './static/images/pizza.jpeg'
+ ];
  
+ const dishTexts2 = [
+   'Burger',
+   'Cake',
+   'Cup cake',
+   'Meatpie',
+   'Pancake',
+   'Pizza',
+ ];
+ 
+ imageUrls2.forEach((imageUrls2, index) => {
+   const imageDiv = document.createElement('div');
+   const image = document.createElement('img');
+   image.src = imageUrls2;
+   image.alt = 'Image';
+   image.style.width = '150px';
+   image.style.height = '150px';
+ 
+   const text = document.createElement('p');
+   text.textContent = dishTexts2[index];
+ 
+   imageDiv.appendChild(image);
+   imageDiv.appendChild(text);
+   pastriesDiv.appendChild(imageDiv);
+ });
 
-const imageUrls2 = [
-    './static/images/burger.jpeg',
-     './static/images/cake.jpeg',
-     './static/images/cupcake.jpeg',
-      './static/images/meatpie.jpeg',
-     './static/images/pancake.jpeg',
-    './static/images/pizza.jpeg', ];
-
-imageUrls2.forEach((imageUrl) => {
-  const imageDiv2 = document.createElement('div');
-  const image = document.createElement('img');
-  image.src = imageUrl;
-  image.alt = 'Image';
-  image.style.width = '150px';
-  image.style.height = '150px'
-
-  const text = document.createElement('p');
-  text.textContent = 'hello';
-
-  imageDiv2.appendChild(image);
-  imageDiv2.appendChild(text);
-
-   pastriesDiv.appendChild(imageDiv2)
-});
-
-const imageUrls3 = [
+ const imageUrls3 = [
    './static/images/summerPunchCocktail.jpg',
    './static/images/StrawberryCocktails.jpeg',
    './static/images/rainbowCocktail.jpeg',
    './static/images/milkshake.jpeg',
     './static/images/fruityCocktail.jpeg',
-   './static/images/frozenVodka.jpeg' ];
-
-imageUrls3.forEach((imageUrl) => {
-  const imageDiv3 = document.createElement('div');
-  const image = document.createElement('img');
-  image.src = imageUrl;
-  image.alt = 'Image';
-  image.style.width = '150px';
-  image.style.height = '150px'
-
-  const text = document.createElement('p');
-  text.textContent = 'hello';
-
-  imageDiv3.appendChild(image);
-  imageDiv3.appendChild(text);
-
-   cocktailDiv.appendChild(imageDiv3)
-});
-
+   './static/images/frozenVodka.jpeg'
+ ];
+ 
+ const dishTexts3= [
+   'summer Punch Cocktail',
+   'Strawberry Cocktail',
+   'rainbow Cocktail',
+   'milkshake',
+   'fruity Cocktail',
+   'frozen Vodka',
+ ];
+ 
+ imageUrls3.forEach((imageUrls3, index) => {
+   const imageDiv = document.createElement('div');
+   const image = document.createElement('img');
+   image.src = imageUrls3;
+   image.alt = 'Image';
+   image.style.width = '150px';
+   image.style.height = '150px';
+ 
+   const text = document.createElement('p');
+   text.textContent = dishTexts2[index];
+ 
+   imageDiv.appendChild(image);
+   imageDiv.appendChild(text);
+   cocktailDiv.appendChild(imageDiv);
+ });
+ 
 };
 
 export default menuPage;
