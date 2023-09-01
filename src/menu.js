@@ -26,12 +26,12 @@ const imageUrls1 = [
  ];
  
  const dishTexts1 = [
-   'Banku and Tilapia: ',
-   'Fried Rice',
-   'Fries',
-   'Fufu',
-   'G)b3',
-   'Jollof Rice',
+   'Banku and Tilapia: $8 ',
+   'Fried Rice: $8',
+   'Fries: $6',
+   'Fufu: $10',
+   'G)b3: $4',
+   'Jollof Rice: $8',
  ];
  
  imageUrls1.forEach((imageUrl, index) => {
@@ -60,12 +60,12 @@ const imageUrls1 = [
  ];
  
  const dishTexts2 = [
-   'Burger',
-   'Cake',
-   'Cup cake',
-   'Meatpie',
-   'Pancake',
-   'Pizza',
+   'Burger: $3',
+   'Cake: $3',
+   'Cup cake: $1',
+   'Meatpie: $2',
+   'Pancake: $2',
+   'Pizza: $4',
  ];
  
  imageUrls2.forEach((imageUrls2, index) => {
@@ -94,12 +94,12 @@ const imageUrls1 = [
  ];
  
  const dishTexts3= [
-   'summer Punch Cocktail',
-   'Strawberry Cocktail',
-   'rainbow Cocktail',
-   'milkshake',
-   'fruity Cocktail',
-   'frozen Vodka',
+   'summer Punch Cocktail: $5',
+   'Strawberry Cocktail: $5',
+   'rainbow Cocktail: $6',
+   'milkshake: $4',
+   'fruity Cocktail: $7',
+   'frozen Vodka: $10',
  ];
  
  imageUrls3.forEach((imageUrls3, index) => {

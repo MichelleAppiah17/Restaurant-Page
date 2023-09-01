@@ -1,4 +1,4 @@
-//import homePage from './home'
+
 import menuPage from './menu'
 import orderPage from './order'
 import aboutPage from './about'
@@ -8,15 +8,12 @@ import './styles.css'
 
     const restaurantName = document.createElement("h1");
     restaurantName.textContent = "Aroma and Taste"
-   // contentDiv.appendChild(tabsDiv)
-     contentDiv.appendChild(restaurantName)
-   // document.body.appendChild(restaurantName);
+    contentDiv.appendChild(restaurantName)
 
     const tabsDiv = document.createElement("div");
     tabsDiv.classList.add("tabs");
-    //contentDiv.appendChild(restaurantName);
-      contentDiv.appendChild(tabsDiv);
-      document.body.appendChild(tabsDiv)
+    contentDiv.appendChild(tabsDiv);
+    document.body.appendChild(tabsDiv)
 
      //about button
      const aboutButton = document.createElement('button');
@@ -41,16 +38,13 @@ import './styles.css'
         bodyElement.style.backgroundSize = 'cover'; 
         bodyElement.style.backgroundRepeat = 'no-repeat';
 
-menuButton.addEventListener('click', () => {
-   // clearContent();
-    menuPage();
-    aboutPage.style.display = 'none'
-    orderPage.style.display = 'none'
-//menuPage();
+  menuButton.addEventListener('click', () => {
+   clearContent();
+   menuPage();
   });
   
   aboutButton.addEventListener('click', () => {
-   // clearContent();
+    clearContent();
     aboutPage();
   });
   
@@ -58,9 +52,6 @@ menuButton.addEventListener('click', () => {
     clearContent();
     orderPage();
   });
-
-    //contentDiv.appendChild(tabsDiv)
-    //contentDiv.appendChild(restaurantName)
   
   function clearContent() {
     contentDiv.innerHTML = '';
