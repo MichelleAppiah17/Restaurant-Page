@@ -1,5 +1,5 @@
 
-function aboutPage(){
+function aboutPage(contentDiv){
         const aboutContainer = document.createElement('div');
         aboutContainer.classList.add('aboutContainer')
 
@@ -15,6 +15,9 @@ function aboutPage(){
      location.textContent = "Location: Bunsu-Junction"
      aboutContainer.appendChild(location);
 
+     //const contentDiv = document.getElementsByClassName('content');
+     contentDiv.appendChild(aboutContainer);
+ 
      document.body.appendChild(aboutContainer);
 
 };

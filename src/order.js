@@ -1,11 +1,11 @@
 
-function orderPage(){
+function orderPage(contentDiv){
     //orderButton.addEventListener('click', function() {
         const orderContainer = document.createElement('div');
         orderContainer.style.backgroundImage = 'url("./static/images/cake.jpeg")';
         orderContainer.style.backgroundSize = 'cover'; 
         orderContainer.style.backgroundRepeat = 'no-repeat';
-     document.body.appendChild(orderContainer);
+       document.body.appendChild(orderContainer);
 
     const form = document.createElement('form');
     const formDiv = document.createElement('div')
@@ -80,7 +80,10 @@ function orderPage(){
     orderButton.type = 'submit';
     formDiv.appendChild(buttonDiv)
     formDiv.appendChild(orderButton);
-    
+   
+    //const contentDiv = document.getElementsByClassName('content');
+    contentDiv.appendChild(orderContainer);
+
   document.body.appendChild(form);
   document.body.appendChild(orderContainer);
 

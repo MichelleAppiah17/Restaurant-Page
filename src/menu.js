@@ -1,5 +1,5 @@
 
-function menuPage(){
+function menuPage(contentDiv){
         const menuContainer = document.createElement('div');
         menuContainer.style.backgroundColor= 'rgba(0, 0, 255, 0.5)';
         
@@ -14,6 +14,8 @@ menuContainer.appendChild(DishesDiv)
 menuContainer.appendChild(pastriesDiv)
 menuContainer.appendChild(cocktailDiv)
 
+ //const contentDiv = document.getElementByClassName('content');
+ contentDiv.appendChild(menuContainer);
 document.body.appendChild(menuContainer);
 
 const imageUrls1 = [
@@ -117,7 +119,8 @@ const imageUrls1 = [
    imageDiv.appendChild(text);
    cocktailDiv.appendChild(imageDiv);
  });
- 
+
+
 };
 
 export default menuPage;

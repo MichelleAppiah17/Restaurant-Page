@@ -4,15 +4,15 @@ import orderPage from './order'
 import aboutPage from './about'
 import './styles.css'
 
-    const contentDiv = document.getElementsByClassName('content')[0];
+    const contentDiv = document.querySelector('.content');
 
     const restaurantName = document.createElement("h1");
     restaurantName.textContent = "Aroma and Taste"
-    contentDiv.appendChild(restaurantName)
+    document.body.appendChild(restaurantName)
 
     const tabsDiv = document.createElement("div");
     tabsDiv.classList.add("tabs");
-    contentDiv.appendChild(tabsDiv);
+    //contentDiv.appendChild(tabsDiv);
     document.body.appendChild(tabsDiv)
 
      //about button
@@ -39,21 +39,23 @@ import './styles.css'
         bodyElement.style.backgroundRepeat = 'no-repeat';
 
   menuButton.addEventListener('click', () => {
-   clearContent();
-   menuPage();
+    clearContent();
+     menuPage(contentDiv);
   });
   
   aboutButton.addEventListener('click', () => {
     clearContent();
-    aboutPage();
+    aboutPage(contentDiv);
   });
   
   orderButton.addEventListener('click', () => {
     clearContent();
-    orderPage();
+    orderPage(contentDiv);
   });
   
-  function clearContent() {
-    contentDiv.innerHTML = '';
-  }
+   function clearContent() {
+    if (contentDiv.innerHTML !== "") {
+      contentDiv.innerHTML = "";
+     } 
+  };
 
