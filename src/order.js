@@ -1,17 +1,19 @@
 
-function orderPage(contentDiv){
-    //orderButton.addEventListener('click', function() {
+function orderPage(){
+      const orderContainerDiv = document.createElement("div");
+      orderContainerDiv.classList.add("orderContainerDiv");
+
         const orderContainer = document.createElement('div');
+        orderContainer.classList.add("orderContainer");
         orderContainer.style.backgroundImage = 'url("./static/images/cake.jpeg")';
         orderContainer.style.backgroundSize = 'cover'; 
         orderContainer.style.backgroundRepeat = 'no-repeat';
-       document.body.appendChild(orderContainer);
 
     const form = document.createElement('form');
     const formDiv = document.createElement('div')
     formDiv.classList.add('formDiv')
     formDiv.appendChild(form)
-    document.body.appendChild(formDiv)
+   
 
     const dishNameDiv = document.createElement('div');
     dishNameDiv.classList.add('label')
@@ -81,11 +83,11 @@ function orderPage(contentDiv){
     formDiv.appendChild(buttonDiv)
     formDiv.appendChild(orderButton);
    
-    //const contentDiv = document.getElementsByClassName('content');
+    orderContainerDiv.appendChild(orderContainer);
+    const contentDiv = document.querySelector(".content");
     contentDiv.appendChild(orderContainer);
-
-  document.body.appendChild(form);
-  document.body.appendChild(orderContainer);
+    contentDiv.appendChild(formDiv);
+    document.body.appendChild(contentDiv)
 
 };
 

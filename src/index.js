@@ -4,30 +4,37 @@ import orderPage from './order'
 import aboutPage from './about'
 import './styles.css'
 
-    const contentDiv = document.querySelector('.content');
+    const contentDiv = document.querySelector(".content");
+    contentDiv.classList.add("contentDiv")
+    document.body.appendChild(contentDiv)
+
+    const restaurantNameDiv = document.createElement("div");
+    restaurantNameDiv.classList.add("restaurantNameDiv");
 
     const restaurantName = document.createElement("h1");
-    restaurantName.textContent = "Aroma and Taste"
-    document.body.appendChild(restaurantName)
+    restaurantName.textContent = "Aroma and Taste";
+
+    restaurantNameDiv.appendChild(restaurantName)
+    document.body.appendChild(restaurantNameDiv)
+
 
     const tabsDiv = document.createElement("div");
     tabsDiv.classList.add("tabs");
-    //contentDiv.appendChild(tabsDiv);
     document.body.appendChild(tabsDiv)
 
-     //about button
+     
      const aboutButton = document.createElement('button');
      aboutButton.textContent = 'ABOUT';
      aboutButton.classList.add("tabsButton");
      tabsDiv.appendChild(aboutButton)
 
-     //menu button
+    
      const menuButton = document.createElement('button');
      menuButton.textContent = 'MENU';
      menuButton.classList.add("tabsButton");
      tabsDiv.appendChild(menuButton)
      
-     //order button
+     
      const orderButton = document.createElement('button');
      orderButton.textContent = 'ORDER';
      orderButton.classList.add("tabsButton");
@@ -40,22 +47,22 @@ import './styles.css'
 
   menuButton.addEventListener('click', () => {
     clearContent();
-     menuPage(contentDiv);
+     menuPage();
   });
   
   aboutButton.addEventListener('click', () => {
     clearContent();
-    aboutPage(contentDiv);
+    aboutPage();
   });
   
   orderButton.addEventListener('click', () => {
     clearContent();
-    orderPage(contentDiv);
+    orderPage();
   });
   
    function clearContent() {
     if (contentDiv.innerHTML !== "") {
-      contentDiv.innerHTML = "";
+       contentDiv.innerHTML = "";
      } 
   };
 

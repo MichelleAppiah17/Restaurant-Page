@@ -1,7 +1,10 @@
 
-function aboutPage(contentDiv){
-        const aboutContainer = document.createElement('div');
-        aboutContainer.classList.add('aboutContainer')
+function aboutPage(){
+        const aboutContainerDiv = document.createElement('div');
+        aboutContainerDiv.classList.add('aboutContainerDiv')
+
+        const aboutContainer = document.createElement("div");
+        aboutContainer.classList.add("aboutContainer");
 
      const restaurantAboutInfo = document.createElement('h4');
      restaurantAboutInfo.textContent= "Welcome to Aroma and Taste, where we are proud to serve delectable and inventive dishes made with locally sourced ingredients in a cozy and welcoming atmosphere. Whether you're looking for a casual meal or a special occasion, our menu will tantalize your taste buds and leave you wanting more. Join us for a memorable dining experience."
@@ -15,10 +18,11 @@ function aboutPage(contentDiv){
      location.textContent = "Location: Bunsu-Junction"
      aboutContainer.appendChild(location);
 
-     //const contentDiv = document.getElementsByClassName('content');
-     contentDiv.appendChild(aboutContainer);
+     const contentDiv = document.querySelector(".content");
+     aboutContainerDiv.appendChild(aboutContainer);
  
-     document.body.appendChild(aboutContainer);
+     contentDiv.appendChild(aboutContainerDiv);
+     document.body.appendChild(contentDiv)
 
 };
 

@@ -1,7 +1,11 @@
 
-function menuPage(contentDiv){
-        const menuContainer = document.createElement('div');
-        menuContainer.style.backgroundColor= 'rgba(0, 0, 255, 0.5)';
+function menuPage(){
+        const menuContainerDiv = document.createElement("div");
+        menuContainerDiv.classList.add("menucontainerDiv");
+
+        const menuContainer= document.createElement('div');
+        menuContainer.classList.add("menucontainer");
+        menuContainer.style.backgroundColor= 'rgba(0, 0, 0, 0.5)';
         
    const DishesDiv = document.createElement('div');
    DishesDiv.classList.add('DishesDiv')
@@ -14,10 +18,10 @@ menuContainer.appendChild(DishesDiv)
 menuContainer.appendChild(pastriesDiv)
 menuContainer.appendChild(cocktailDiv)
 
- //const contentDiv = document.getElementByClassName('content');
- contentDiv.appendChild(menuContainer);
-document.body.appendChild(menuContainer);
-
+ menuContainerDiv.appendChild(menuContainer)
+ const contentDiv = document.querySelector(".content");
+ contentDiv.appendChild(menuContainerDiv);
+ 
 const imageUrls1 = [
    './static/images/banku.jpeg',
    './static/images/friedRice.jpeg',
@@ -120,6 +124,7 @@ const imageUrls1 = [
    cocktailDiv.appendChild(imageDiv);
  });
 
+  document.body.appendChild(contentDiv)
 
 };
 

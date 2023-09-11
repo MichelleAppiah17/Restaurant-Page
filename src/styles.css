@@ -2,7 +2,7 @@
 .tabs{
     display: flex;
     justify-content: space-around;
-    background-color: blanchedalmond;
+    background-color: rgb(255, 235, 206, 0.2);
 }
 h1{
     color: antiquewhite;
@@ -66,5 +66,16 @@ h5{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.contentDiv{
+    margin-top: 50px;
+}
+p{
+    color: rgb(230, 223, 223);
+}
+.tabsButton{
+    border: none;
+    background-color: rgb(210, 235, 241,0.3);
+    height: 30px;
 }
     
